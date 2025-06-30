@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: events
+    description: "Raw event dataset in BigQuery"
+    tables:
+      - name: user_metrics
+        description: "Raw user-level metrics"

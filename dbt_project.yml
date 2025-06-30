@@ -1,0 +1,18 @@
+name: vertigo_metrics
+version: 1.0
+config-version: 2
+
+profile: vertigo_case
+
+model-paths: ["models"]
+
+models:
+  vertigo_case:
+    marts:
+      daily_metrics_v:
+        +materialized: view
+      daily_metrics:
+        +materialized: incremental
+        +partition_by:
+          field: event_date
+          data_type: date
